@@ -22,3 +22,17 @@ product.overrides.json
 *.snap.actual
 *.tsbuildinfo
 .vscode-test
+
+# Clacky Environment
+/home/runner/.clackyai/.environments.yaml
+.env
+.env.local
+
+# Additional Rust ignores
+**/*.rs.bk
+**/Cargo.lock
+
+# Additional TypeScript ignores
+.tsbuildinfo
+dist
+.turbo

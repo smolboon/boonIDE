@@ -1,0 +1,304 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) BoonIDE Team. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+/* BoonIDE Panel Styles */
+.boonide-container {
+    background-color: #1E1E1E;
+    color: #F8F8F8;
+    padding: 12px;
+    height: 100%;
+    overflow-y: auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.boonide-container h3 {
+    color: #F8F8F8;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 8px 0;
+    border-bottom: 1px solid #3C3C3C;
+    padding-bottom: 4px;
+}
+
+/* Mode Toggle Section */
+.boonide-mode-section {
+    margin-bottom: 20px;
+}
+
+.boonide-mode-toggle {
+    display: flex;
+    gap: 8px;
+}
+
+.boonide-mode-btn {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.boonide-mode-btn.active {
+    background-color: #93456d;
+    color: #F8F8F8;
+    box-shadow: 0 2px 4px rgba(147, 69, 109, 0.3);
+}
+
+.boonide-mode-btn:not(.active) {
+    background-color: #3C3C3C;
+    color: #CCCCCC;
+}
+
+.boonide-mode-btn:hover:not(.active) {
+    background-color: #4A4A4A;
+    color: #F8F8F8;
+}
+
+/* Prompt Interface Section */
+.boonide-prompt-section {
+    margin-bottom: 20px;
+}
+
+.boonide-prompt {
+    width: 100%;
+    height: 80px;
+    background-color: #2D2D2D;
+    color: #F8F8F8;
+    border: 1px solid #3C3C3C;
+    border-radius: 6px;
+    padding: 10px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 13px;
+    line-height: 1.4;
+    resize: vertical;
+    margin-bottom: 12px;
+    transition: border-color 0.2s ease;
+    box-sizing: border-box;
+}
+
+.boonide-prompt:focus {
+    outline: none;
+    border: 1px solid #93456d;
+    box-shadow: 0 0 0 2px rgba(147, 69, 109, 0.2);
+}
+
+.boonide-prompt::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+.boonide-submit {
+    background-color: #93456d;
+    color: #F8F8F8;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.boonide-submit:hover {
+    background-color: #a04f7a;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(147, 69, 109, 0.3);
+}
+
+.boonide-submit:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(147, 69, 109, 0.3);
+}
+
+/* Agent Status Section */
+.boonide-agent-section {
+    margin-bottom: 20px;
+}
+
+.boonide-agent-status {
+    background-color: #252525;
+    border: 1px solid #3C3C3C;
+    border-radius: 6px;
+    padding: 8px;
+}
+
+.agent-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    background-color: #2D2D2D;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.agent-item:hover {
+    background-color: #363636;
+}
+
+.agent-item:last-child {
+    margin-bottom: 0;
+}
+
+.agent-left {
+    display: flex;
+    align-items: center;
+}
+
+.agent-status-icon {
+    margin-right: 10px;
+    font-size: 14px;
+    width: 14px;
+    text-align: center;
+}
+
+.agent-name {
+    color: #F8F8F8;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.agent-cpu {
+    color: #CCCCCC;
+    font-size: 11px;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+/* Quick Actions Section */
+.boonide-actions-section {
+    margin-bottom: 20px;
+}
+
+.boonide-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.boonide-action-btn {
+    padding: 8px 14px;
+    border: 1px solid #3C3C3C;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    background-color: #2D2D2D;
+    color: #F8F8F8;
+    transition: all 0.2s ease;
+}
+
+.boonide-action-btn:hover {
+    background-color: #93456d;
+    border-color: #93456d;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(147, 69, 109, 0.2);
+}
+
+/* Agent Logs Section */
+.boonide-logs-section {
+    margin-bottom: 10px;
+}
+
+.boonide-logs {
+    background-color: #1A1A1A;
+    border: 1px solid #3C3C3C;
+    border-radius: 6px;
+    padding: 10px;
+    max-height: 200px;
+    overflow-y: auto;
+    font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+.log-entry {
+    margin-bottom: 6px;
+    padding: 2px 0;
+    word-wrap: break-word;
+}
+
+.log-entry:last-child {
+    margin-bottom: 0;
+}
+
+/* Custom scrollbar for logs */
+.boonide-logs::-webkit-scrollbar {
+    width: 8px;
+}
+
+.boonide-logs::-webkit-scrollbar-track {
+    background: #2D2D2D;
+    border-radius: 4px;
+}
+
+.boonide-logs::-webkit-scrollbar-thumb {
+    background: #93456d;
+    border-radius: 4px;
+}
+
+.boonide-logs::-webkit-scrollbar-thumb:hover {
+    background: #a04f7a;
+}
+
+/* Animation for mode switching */
+@keyframes modeSwitch {
+    0% { opacity: 0.8; transform: scale(0.98); }
+    50% { opacity: 1; transform: scale(1.02); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.boonide-mode-btn.active {
+    animation: modeSwitch 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 300px) {
+    .boonide-mode-toggle {
+        flex-direction: column;
+    }
+    
+    .boonide-actions {
+        flex-direction: column;
+    }
+    
+    .boonide-action-btn {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Focus indicators for accessibility */
+.boonide-mode-btn:focus,
+.boonide-submit:focus,
+.boonide-action-btn:focus {
+    outline: 2px solid #93456d;
+    outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .boonide-container {
+        background-color: #000000;
+        color: #FFFFFF;
+    }
+    
+    .agent-item,
+    .boonide-prompt,
+    .boonide-logs {
+        border-color: #FFFFFF;
+    }
+    
+    .boonide-mode-btn.active,
+    .boonide-submit {
+        background-color: #FFFFFF;
+        color: #000000;
+    }
+}
